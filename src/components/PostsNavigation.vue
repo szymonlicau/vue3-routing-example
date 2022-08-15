@@ -23,12 +23,13 @@ export default defineComponent({
         :key="post.id"
         class="posts-nav__item"
       >
-        <a
-          href='#'
+        <router-link
+          :to="{ name: 'Post', params: { postId: post.id } }"
           class="posts-nav-item"
+          active-class="posts-nav-item--active"
         >
           {{ post.title }}
-        </a>
+        </router-link>
       </li>
     </ul>
   </nav>

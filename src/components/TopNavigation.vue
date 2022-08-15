@@ -5,8 +5,8 @@ export default defineComponent({
   computed: {
     items () {
       return [
-        { label: 'Home' },
-        { label: 'Posts' }
+        { label: 'Home', route: 'Home' },
+        { label: 'Posts', route: 'Posts' }
       ];
     }
   }
@@ -21,12 +21,13 @@ export default defineComponent({
         :key="`${item.label}-${index}`"
         class="top-navigation__item"
       >
-        <a
+        <router-link
           class="top-navigation-item"
-          href="#"
+          :to="{ name: item.route }"
+          active-class="top-navigation-item--active"
         >
           {{ item.label }}
-        </a>
+        </router-link>
       </li>
     </ul>
   </nav>

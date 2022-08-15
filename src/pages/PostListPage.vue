@@ -4,12 +4,12 @@ import { defineComponent } from 'vue';
 import { loadAll } from '@/services/api/posts';
 
 import BearLoader from '@/components/BearLoader.vue';
-import PostsNavigation from '@/components/PostsNavigation.vue';
+import PostItem from '@/components/PostItem.vue';
 
 export default defineComponent({
   components: {
     BearLoader,
-    PostsNavigation
+    PostItem,
   },
 
   data () {
@@ -36,24 +36,31 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="posts-page">
-    <router-view />
+  <div class="posts">
+    <h1 class="posts__header"> Recent Posts </h1>
 
     <BearLoader
       v-if="loading"
+      class="posts__loader"
     />
 
-    <PostsNavigation
+    <div
+      class="posts__list"
       v-else
-      :recent-posts="posts"
-    />
+    >
+      <PostItem
+        v-for="post in posts"
+        :key="post.id"
+        :post="post"
+      />
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.posts-page {
-  display: grid;
-  grid-template-columns: 1fr 24rem;
-  grid-gap: 2.4rem;
+.posts {
+  &__header {
+    margin-bottom: 2.4rem;
+  }
 }
 </style>

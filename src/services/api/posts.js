@@ -4,7 +4,7 @@ import posts from "@/mocks/posts";
  * API is mocked and works on mocks and set timeout
  */
 
-const API_DELAY = 2000;
+const API_DELAY = 500;
 
 export function loadOne (id) {
   return new Promise(resolve => {

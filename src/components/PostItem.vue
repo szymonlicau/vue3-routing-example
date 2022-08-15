@@ -28,12 +28,12 @@ export default defineComponent({
         {{ post.description }}
       </p>
 
-      <a
-        href="#"
+      <router-link
+        :to="{ name: 'Post', params: { postId: post.id } }"
         class="post__read-more"
       >
         Read more
-      </a>
+      </router-link>
     </div>
   </article>
 </template>

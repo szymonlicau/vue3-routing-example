@@ -3,6 +3,8 @@
 
   <p>
     Check out the
-    <a href="#">recent posts</a>.
+    <router-link :to="{ name: 'Posts' }">
+      recent posts
+    </router-link>.
   </p>
 </template>
