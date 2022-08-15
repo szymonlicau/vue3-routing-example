@@ -1,0 +1,21 @@
+:root {
+  // Colors
+  --color-white: #fff;
+  --color-black: #0d0d0d;
+  --color-text: var(--color-black);
+  --color-green: #2b86a1;
+  --color-border: #1d1d1d;
+  --color-background: var(--color-white);
+
+  // Shadows
+  --shadow-common: 0 0 0.8rem rgba(0, 0, 0, 0.2);
+
+  // Dimensions
+  --content-width: 128rem;
+
+  // Animation
+  --transition-duration: 0.2s;
+
+  // Z-indexes
+  --z-top-navigation: 1;
+}
