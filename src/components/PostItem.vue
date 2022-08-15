@@ -27,6 +27,13 @@ export default defineComponent({
       <p class="post__description">
         {{ post.description }}
       </p>
+
+      <a
+        href="#"
+        class="post__read-more"
+      >
+        Read more
+      </a>
     </div>
   </article>
 </template>
@@ -35,7 +42,6 @@ export default defineComponent({
 .post {
   border-radius: 0.4rem;
   padding: 1.6rem;
-  cursor: pointer;
   display: grid;
   grid-template-columns: 24rem 1fr;
   grid-column-gap: 1.6rem;
@@ -48,12 +54,14 @@ export default defineComponent({
   &__cover {
     object-fit: cover;
     width: 100%;
-    height: 100%;
+    height: 18rem;
     border-radius: 0.4rem;
   }
 
   &__info {
     overflow: hidden;
+    display: flex;
+    flex-flow: column;
   }
 
   &__title {
@@ -66,6 +74,12 @@ export default defineComponent({
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  &__read-more {
+    display: inline-block;
+    margin-top: auto;
+    margin-left: auto;
   }
 }
 </style>

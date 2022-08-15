@@ -4,6 +4,7 @@ import { defineComponent } from 'vue';
 import TopNavigation from '@/components/TopNavigation.vue';
 
 import HomePage from '@/pages/HomePage.vue';
+import NotFoundPage from '@/pages/NotFoundPage.vue';
 import PostsPage from '@/pages/PostsPage.vue';
 import PostPage from '@/pages/PostPage.vue';
 
@@ -12,8 +13,9 @@ export default defineComponent({
     TopNavigation,
 
     HomePage,
+    NotFoundPage,
     PostsPage,
-    PostPage
+    PostPage,
   }
 });
 </script>
@@ -25,6 +27,7 @@ export default defineComponent({
     <HomePage />
     <!-- <PostsPage /> -->
     <!-- <PostPage post-id="1" /> -->
+    <!-- <NotFoundPage /> -->
   </main>
 </template>
 
